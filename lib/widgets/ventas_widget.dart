@@ -1,7 +1,7 @@
 // import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:month_picker_dialog_2/month_picker_dialog_2.dart';
+import 'package:month_picker_dialog/month_picker_dialog.dart';
 
 import '../bloc/agencia_bloc.dart';
 import '../bloc/reporte_bloc.dart';

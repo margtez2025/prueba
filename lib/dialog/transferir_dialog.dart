@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_touch_spin/flutter_touch_spin.dart'; // Importación modificada
+import 'package:flutter_touch_spin_2/flutter_touch_spin_2.dart'; // Importación modificada
 import 'package:intl/intl.dart';
 
 import '../preference/shared_preferences.dart';

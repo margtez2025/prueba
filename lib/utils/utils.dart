@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:badges/badges.dart' as badges;
-import 'package:blinking_point/blinking_point.dart';
+import 'package:blinking_text/blinking_text.dart';
 import 'package:crypto/crypto.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';

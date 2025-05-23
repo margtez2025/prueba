@@ -2,15 +2,15 @@ import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:badges/badges.dart' as badges;
-import 'package:blinking_point/blinking_point.dart';
+import 'package:blinking_text/blinking_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_touch_spin/flutter_touch_spin.dart';
+import 'package:flutter_touch_spin_2/flutter_touch_spin_2.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:slider_button/slider_button.dart';
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 import 'package:url_launcher/url_launcher.dart';
