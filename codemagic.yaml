@@ -1,17 +1,37 @@
 workflows:
-  upgrade_null_safety:
-    name: Upgrade Null Safety
-    max_build_duration: 10
+  curiosity_build:
+    name: Curiosity - Flutter Build
     environment:
       flutter: stable
+      xcode: latest  # Solo se aplica si compilas para iOS
       vars:
-        PUB_ENVIRONMENT: "ci"
+        BUNDLE_ID: "com.ranty.curiosity"
+        APP_NAME: "Curiosity"
+        FLUTTER_BUILD_MODE: "release"
     scripts:
-      - name: Upgrade to null safety
+      - name: Install dependencies
         script: |
-          flutter pub upgrade --null-safety
-          dart pub outdated --mode=null-safety
-      - name: Run analyzer
-        script: flutter analyze
+          flutter pub get
+      - name: Analyze code
+        script: |
+          flutter analyze
       - name: Run tests
-        script: flutter test
+        script: |
+          flutter test
+      - name: Build APK
+        script: |
+          flutter build apk --release
+      - name: Build AAB
+        script: |
+          flutter build appbundle --release
+      - name: (Optional) Build iOS
+        script: |
+          flutter build ios --release --no-codesign
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+      - build/app/outputs/bundle/release/app-release.aab
+      - build/ios/iphoneos/Runner.app
+    publishing:
+      email:
+        recipients:
+          - margtezchichitasanti@gmail.com

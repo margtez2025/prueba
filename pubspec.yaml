@@ -4,7 +4,8 @@ description: Compra a domicilio a los mejores restaurantes en Loja. Encuentra ca
 version: 1.71.77+77
 
 environment:
-  sdk: '>=2.12.0 <4.0.0'
+  sdk: '>=2.17.0 <4.0.0'
+
 
 
 dependencies:
