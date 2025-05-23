@@ -1,0 +1,17 @@
+workflows:
+  upgrade_null_safety:
+    name: Upgrade Null Safety
+    max_build_duration: 10
+    environment:
+      flutter: stable
+      vars:
+        PUB_ENVIRONMENT: "ci"
+    scripts:
+      - name: Upgrade to null safety
+        script: |
+          flutter pub upgrade --null-safety
+          dart pub outdated --mode=null-safety
+      - name: Run analyzer
+        script: flutter analyze
+      - name: Run tests
+        script: flutter test
